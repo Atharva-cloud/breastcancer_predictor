@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 from PIL import Image
 
-rf_model = pickle.load(open('C:/Users/athar/OneDrive/Documents/Cancer_model.pkl','rb'))
+rf_model = pickle.load(open('Cancer_model.pkl','rb'))
 
 def main():
     html_temp = """
@@ -12,7 +12,7 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
-    image = Image.open('C:/Users/athar/OneDrive/Pictures/Posters/BreastCancerAwareness.jpg')
+    image = Image.open('BreastCancerAwareness.jpg')
     st.image(image)
 
     activities = ['About Breast Cancer','Symptoms']
