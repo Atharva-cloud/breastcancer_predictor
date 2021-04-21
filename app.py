@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 from PIL import Image
 
-rf_model = pickle.load(open('C:/Users/athar/OneDrive/Documents/Cancer_model.pkl','rb'))
+rf_model = pickle.load(open('Cancer_model.pkl','rb'))
 
 def main():
     html_temp = """
