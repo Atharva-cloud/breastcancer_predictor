@@ -4,6 +4,14 @@ from PIL import Image
 
 rf_model = pickle.load(open('Cancer_model.pkl','rb'))
 
+def prediction(inputs):
+    prediction = rf_model.predict([inputs])
+
+    if prediction == 0:
+        pred = "Benign"
+    else:
+        pred = "Malignant"
+
 def main():
     html_temp = """
     <div style = "background color:#5F4B8BFF; padding:10px">
@@ -74,13 +82,9 @@ def main():
 
     if st.button('CALCULATE'):
         st.write("The following is a **report** based on your inputs")
-        result = rf_model.predict(inputs)
-
-        st.success(result)
-        if result == 0:
-            st.write('You are safe, the cells are Benign')
-        else:
-            st.write("At Risk: The cells are malignant, immediately consult an Oncologist")
+       
+        result = prediction(inputs)
+        st.success('Your tumor is {}'.format(result))
 
     else:
         pass
