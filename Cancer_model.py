@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 import pickle
-data = pd.read_csv('C:/Users/athar/OneDrive/Documents/Data.csv')
+data = pd.read_csv('Data.csv')
 
 data = data.drop(['Unnamed: 32','id'],axis = 1)
 data = data.drop(data.iloc[:,11:], axis =1)
