@@ -11,7 +11,8 @@ def prediction(inputs):
         pred = "Benign"
     else:
         pred = "Malignant"
-
+    
+    return pred
 def main():
     html_temp = """
     <div style = "background color:#5F4B8BFF; padding:10px">
