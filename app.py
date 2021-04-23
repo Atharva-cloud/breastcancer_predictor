@@ -71,7 +71,7 @@ def main():
 
 
     inputs = [mean_radius,mean_texture,mean_perimeter,mean_area,mean_smoothness,mean_compactness,mean_concavity,mean_concavepoints,mean_symmetry,mean_fractal_dimension]
-
+    result = ""
 
     st.subheader("Get Report")
 
